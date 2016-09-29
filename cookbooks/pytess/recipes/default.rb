@@ -1,7 +1,8 @@
 #
 # Cookbook Name:: pytess
 # Recipe:: default
-#
+
+include_recipe 'poise-python'
 
 apt_package "git-core" do
   action :install
@@ -25,4 +26,7 @@ end
 
 apt_package "poppler-utils" do
   action :install
+end
+
+python_package "pytesseract" do
 end
